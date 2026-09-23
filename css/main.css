@@ -34,5 +34,5 @@ a:hover {
   padding: 20px;
   outline: 8px ridge rgb(170 50 220 / 0.6);
   border-radius: 2rem;
-
+  text-align: left;
 }
