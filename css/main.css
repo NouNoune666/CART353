@@ -1,0 +1,38 @@
+body {
+  padding: 10px;
+  background-color: whitesmoke;
+  font-family: 'Montserrat';
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+a:hover {
+  text-decoration: green wavy underline
+}
+
+.top {
+  color: black;
+  padding: 10px;
+  background-color: #4949e08f;
+  outline: 8px ridge rgb(170 50 220 / 0.6);
+  border-radius: 2rem;
+}
+
+.bottom {
+  padding: 20px;
+
+}
+
+.box {
+  padding: 20px;
+  outline: 8px ridge rgb(170 50 220 / 0.6);
+  border-radius: 2rem;
+
+}
