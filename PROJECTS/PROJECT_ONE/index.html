@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Realtime Location Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            background: blue;
+        }
+
+        .header {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1> Realtime Location Tracker </h1>
+        <div class="coordinates" id="coordinates">
+            Acquiring Location...
+        </div>
+    </header>
+    <div id=map></div>
+</body>
+
+</html>
