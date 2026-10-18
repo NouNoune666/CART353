@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.621487,
+                    45.543273
+                ]
+            },
+            "properties": {
+                "label": "660 Rue Villeray - 660 Rue Villeray, Montreal, Quebec H2R 1J1, Canada",
+                "marker-color": "rgba(255, 0, 0, 1)",
+                "marker-size": "large",
+                "marker-symbol": "circle-stroked",
+                "Nom": "Association des Locataires de Villeray"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.619739,
+                    45.535904
+                ]
+            },
+            "properties": {
+                "label": "1 Rue De Castelnau E - 1 Rue De Castelnau E, Montreal, Quebec H2R 1P1, Canada",
+                "marker-color": "rgba(55, 129, 90, 1)",
+                "marker-size": "large",
+                "marker-symbol": "caution",
+                "Nom": "Bond Immobilia"
+            }
+        }
+    ]
+}
