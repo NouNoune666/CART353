@@ -1,49 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <title>Carte de Montréal</title>
 
-    <link rel="stylesheet" type="text/css" href="projectOne.css">
+    <!--my own css -->
+    <link rel="stylesheet" href="projectOne.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.css"
-        integrity="sha256-P+hWJNlpL+GBSRYC7cdsDbQH91URmpDeOzLp7DbFRtE=" crossorigin="" />
+    <!-- leaflet's css (zoom, popus, attribution bar, etc.), integrity for security -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-    <script type="importmap">
-{
-    "imports": {
-        "leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js"
-    },
-    "integrity": {
-        "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js": "sha256-gj5JhNAaMi6LCs+jVFOk8sXDe1sWSS2Zlc87m+trLiQ="
-    }
-}
-</script>
+    <!--leaflet's javascript, integrity for security -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!--MapTiler's javascript / mapping engine -->
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v4.2.0/maptiler-sdk.umd.min.js"></script>
+
+    <!--MapTiler's css (controls, scale bars, etc.) -->
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/v4.2.0/maptiler-sdk.css" rel="stylesheet" />
+
+    <!--Leaflet + MapTiler bridge plugin -->
+    <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.1.0/leaflet-maptilersdk.umd.min.js"></script>
+
 </head>
 
 <body>
     <div id="map"> </div>
-    <script type="module">
-        import { LeafletMap, TileLayer, Marker, Circle, Polygon, Popup } from 'leaflet';
-        const map = new LeafletMap('map').setView([45.508, -73.561], 13);
-        new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        const marker = new Marker([45.508, -73.561]).addTo(map);
-        const circle = new Circle([45.508, -73.561], {
-            color: 'red',
-            fillColor: '#f03',
-            fillOpacity: 0.5,
-            radius: 500
-        }).addTo(map);
-        const polygon = new Polygon([
-            [45.508, -73.561],
-            [45.502, -73.559],
-            [45.509, -73.546]
-        ]).addTo(map);
-    </script>
+    <script>
+        <!-- my api key -->
+        const key = '7vKeZnHekBMfDZnpSUkw';
+        const styleURL = 'https://api.maptiler.com/maps/01a14c50-96ac-7805-8ea9-dc914492797a/style.json?key=' + key;
+        const map = L.map(document.getElementById('map')).setView([45.547307, -73.618364], 16); //latitude, longtitude, zoom
+        const mtLayer = L.maptiler.maptilerLayer({
+            apiKey: key,
+            style: styleURL,
+        }).addTo(map); </script>
 </body>
 
 </html>
